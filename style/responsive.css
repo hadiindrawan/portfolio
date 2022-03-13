@@ -17,12 +17,17 @@
   #namaText {
       position: relative !important;
   }
+  #namaText h1 {
+      letter-spacing: 8px !important;
+      line-height: 20px;
+  }
   #namaText .animate{
       font-size: 30px;
   }
 
   .content__main .text p {
       margin-top: 30px !important;
+      padding-right: 40px !important;
   }
 
   .medsos img {
