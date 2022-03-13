@@ -68,6 +68,13 @@
   .bgNavMob {
       z-index: 1;
   }
+  .bgNavMob#bgNav {
+    height: 100vh;
+    background-color: #222222;
+    position: absolute;
+    width: 70%;
+    transition: 0.8s linear;
+  }
 
   /* about */
   .about .foto {
