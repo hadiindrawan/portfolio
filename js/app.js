@@ -1,14 +1,17 @@
 let btn = document.getElementById('toggleMenu');
 let menu = document.getElementById('menu');
 let sidebar = document.getElementById('sideBar');
+let bgNav = document.getElementById('bgNav');
 
 btn.addEventListener('click', function() {
     if (menu.hasAttribute('show')) {
         menu.classList.remove('show');
         sidebar.classList.remove('expandSidebar');
+        bgNav.classList.remove('d-none');
     } else {
         menu.classList.toggle('show');
         sidebar.classList.toggle('expandSidebar');
+        bgNav.classList.toggle('d-none');
     }
 })
 
@@ -18,7 +21,7 @@ const homePage = document.getElementById('homeNav');
 const porfolioPage = document.getElementById('porfolioNav');
 const contactPage = document.getElementById('contactNav');
 
-if (path == '/index.html') {
+if (path == '/index.html' || path == '/') {
     homePage.classList.add('nav-active')
     porfolioPage.classList.remove('nav-active')
     contactPage.classList.remove('nav-active')

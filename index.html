@@ -21,9 +21,15 @@
 <body>
     <div class="cover">
         <div class="content">
+            <!-- <div class="btn-menu d-none toggleMobile" id="toggleMenu" style="padding:20px; margin: 0 auto; cursor: pointer;"></div> -->
             <!-- Sidebar -->
             <aside class="content__sidebar" id="sideBar" style="border-right: 1px solid black;">
-                <div class="btn-menu" id="toggleMenu" style="padding:20px; margin: 0 auto; cursor: pointer;">
+                <div class="bgNavMob d-none" id="bgNav" style="    height: 100vh;
+                background-color: #222222;
+                position: absolute;
+                width: 50%;
+                transition: all 0.8s ease-in-out;"></div>
+                <div class="btn-menu toggleWeb" id="toggleMenu" style="padding:20px; margin: 0 auto; cursor: pointer;">
                     <i class="fa fa-bars" style="padding-left: 5px;" aria-hidden="true"></i>
                 </div>
                 <div class="menu d-none" id="menu" style="padding: 25px 15px;">
