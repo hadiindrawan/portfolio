@@ -46,3 +46,18 @@ var typed = new Typed(".animate", {
 // scrollreveal
 ScrollReveal({ reset: true });
 ScrollReveal().reveal('.card-skill', {delay: 100});
+
+// responsive 
+function myFunction(x) {
+  if (x.matches) { // If media query matches
+    document.getElementById('logoIg').src = '/asset/igwhite.png'
+    document.getElementById('logoLnk').src = '/asset/linkwhite.png'
+    document.getElementById('logoWa').src = '/asset/wawhite.png'
+  } else {
+    console.log('okee');
+  }
+}
+
+var x = window.matchMedia("(max-width: 576px)")
+myFunction(x) // Call listener function at run time
+x.addListener(myFunction) 

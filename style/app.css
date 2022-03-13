@@ -16,6 +16,11 @@ a {
   text-decoration: none;
 }
 
+.btn-hover:hover {
+  background-color: #006f5a;
+  color: white;
+}
+
 .cover,
 .about {
   height: 100vh;

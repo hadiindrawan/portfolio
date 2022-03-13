@@ -1,0 +1,94 @@
+@media only screen and (max-width: 576px) { 
+    /* cover */
+  .content {
+      display: flex;
+      background-image: url('/asset/coba.png');
+      background-size: cover;
+      height: 100vh;
+      color: rgb(214, 214, 214) !important;
+  }
+  #sideBar {
+      border: none !important;
+  }
+  .content__main .foto {
+      display: none;
+  }
+
+  #namaText {
+      position: relative !important;
+  }
+  #namaText .animate{
+      font-size: 30px;
+  }
+
+  .content__main .text p {
+      margin-top: 30px !important;
+  }
+
+  .medsos img {
+      width: 24px;
+  }
+
+  /* about */
+  .about .foto {
+      display: none;
+  }
+  .about #aboutContent { 
+      padding: 35px !important;
+      margin-top: 0 !important;
+  }
+
+  /* skill */ 
+  .skill #title {
+      margin: 0 !important;
+      padding: 35px !important;
+      padding-bottom: 20px !important;
+  }
+  .skill .album {
+      padding: 0 !important;
+  }
+  .skill .album #appImg {
+      margin-left: 16px;
+  }
+  .skill .album #webImg {
+      margin-left: 32px !important;
+  }
+  .skill .album #fullImg {
+      margin-left: 36px !important;
+  }
+  .skill .album #engImg {
+      margin-left: 32px !important;
+  }
+
+  /* project */
+  .project #title {
+      margin: 0 !important;
+      padding: 35px !important;
+      padding-bottom: 20px !important;
+  }
+  .tab .nav {
+      margin: 0 15px;
+  }
+
+  .carousel-inner img {
+      width: inherit;
+  }
+  .project .album {
+      display: none;
+  }
+
+  /* teknologi */
+  .skillTeknologi #title {
+      margin: 0 !important;
+      padding: 35px !important;
+      padding-bottom: 20px !important;
+  }
+  .skillTeknologi .album .col-6 {
+      text-align: center;
+  }
+
+  /* footer */
+  .footer #footerContent {
+      margin: 0 !important;
+  }
+}

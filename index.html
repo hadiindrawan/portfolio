@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/style/app.css">
+    <link rel="stylesheet" href="/style/responsive.css">
     <style>
         
     </style>
@@ -38,14 +39,14 @@
             <div class="d-flex content__main">
                 <div class="text" style="align-self: center; padding-left: 45px;">
                     <h3 class="">Hi! I am</h3>
-                    <div style="position: absolute;">
+                    <div style="position: absolute;" id="namaText">
                         <h1 style="font-size: 80px; letter-spacing: 10px; color: rgb(17, 17, 17); font-weight: bold;" ><span class="animate"></span></h1>
                     </div>
                     <p style="margin-top: 120px; padding-right: 15px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, nisi tempora similique voluptate velit saepe.</p>
                     <div class="medsos" style="margin-top: 100px;">
-                       <a href="https://www.instagram.com/hadiindrawann/" target="_blank"><img src="/asset/igblack.png" alt="Instagram" width="32px" style="margin-right: 20px;"></a>
-                       <a href="https://www.linkedin.com/in/hadi-indrawan/" target="_blank"><img src="/asset/Linkblack.png" alt="LinkedIn" width="32px" style="margin-right: 20px;"></a>
-                       <a href="https://wa.me/6287830000351/" target="_blank"><img src="/asset/wablack.png" alt="WhatsApp" width="32px" style="margin-right: 20px;"></a>
+                       <a href="https://www.instagram.com/hadiindrawann/" target="_blank"><img src="/asset/igblack.png" alt="Instagram" width="32px" style="margin-right: 20px;" id="logoIg"></a>
+                       <a href="https://www.linkedin.com/in/hadi-indrawan/" target="_blank"><img src="/asset/Linkblack.png" alt="LinkedIn" width="32px" style="margin-right: 20px;" id="logoLnk"></a>
+                       <a href="https://wa.me/6287830000351/" target="_blank"><img src="/asset/wablack.png" alt="WhatsApp" width="32px" style="margin-right: 20px;" id="logoWa"></a>
                     </div>
                 </div>
                 <div class="foto" style="text-align: right;">
@@ -54,11 +55,11 @@
             </div>
         </div>
     </div>
-    <div class="about d-flex" style="background-color: #222222;">
+    <div class="about" style="background-color: #222222;">
         <div class="foto" style="align-self: center; margin-left: 150px;">
             <img src="/asset/coba.png" alt="Hadi" style="height: 400px; overflow: hidden;">
         </div>
-        <div style="padding: 35px 100px; margin-top: 100px;">
+        <div id="aboutContent" style="padding: 35px 100px; margin-top: 100px;">
         <h1 style="color: #fff; margin-bottom: 25px;">About Me</h1>
         <p style="color: rgba(225, 225, 225, 0.8)">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit eligendi quis debitis maiores? Deleniti sequi at maiores ducimus qui, magnam, molestias quasi veniam nihil aliquid quod est voluptas incidunt quibusdam!</p>
         <div class="btn-hire" style="margin-top: 35px;">
@@ -69,13 +70,13 @@
     </div>
 
     <div class="skill">
-        <h1 style="padding: 25px; margin-top: 50px; margin-left: 50px; ">My Skill</h1>
+        <h1 style="padding: 25px; margin-top: 50px; margin-left: 50px;" id="title">My Skill</h1>
         <div class="album py-3">
             <div class="container">
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
                     <div class="col">
                         <div class="card card-skill shadow-sm">
-                            <img src="/asset/mobile.png" width="100px" style="position: absolute; margin-top: 30px;">
+                            <img id="appImg" src="/asset/mobile.png" width="100px" style="position: absolute; margin-top: 30px;">
                             <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
                                 xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
                                 preserveAspectRatio="xMidYMid slice" focusable="false">
@@ -87,7 +88,7 @@
                     </div>
                     <div class="col">
                         <div class="card card-skill shadow-sm">
-                            <img src="/asset/design.png" width="100px" style="position: absolute; margin-top: 30px; margin-left: 20px;">
+                            <img id="webImg" src="/asset/design.png" width="100px" style="position: absolute; margin-top: 30px; margin-left: 20px;">
                             <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
                                 xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
                                 preserveAspectRatio="xMidYMid slice" focusable="false">
@@ -99,7 +100,7 @@
                     </div>
                     <div class="col">
                         <div class="card card-skill shadow-sm">
-                            <img src="/asset/web.png" width="100px" style="position: absolute; margin-top: 30px; margin-left: 20px;">
+                            <img id="fullImg" src="/asset/web.png" width="100px" style="position: absolute; margin-top: 30px; margin-left: 20px;">
                             <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
                                 xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
                                 preserveAspectRatio="xMidYMid slice" focusable="false">
@@ -111,7 +112,7 @@
                     </div>
                     <div class="col">
                         <div class="card card-skill shadow-sm">
-                            <img src="/asset/engineer.png" width="100px" style="position: absolute; margin-top: 30px; margin-left: 20px;">
+                            <img id="engImg" src="/asset/engineer.png" width="100px" style="position: absolute; margin-top: 30px; margin-left: 20px;">
                             <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
                                 xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
                                 preserveAspectRatio="xMidYMid slice" focusable="false">
@@ -126,7 +127,7 @@
         </div>
     </div>
     <div class="project">
-        <h1 style="padding: 25px; margin-top: 50px; margin-left: 50px; ">Latest Project</h1>
+        <h1 id="title" style="padding: 25px; margin-top: 50px; margin-left: 50px; ">Latest Project</h1>
         <div class="tab">
             <div class="container">
                 <div class="row">
@@ -244,6 +245,9 @@
                                             </div>
                                         </div>
                                     </div>
+                                </div>
+                                <div id="viewMore" style="text-align: center; padding: 20px 0;">
+                                    <a href="/portfolio.html" class="btn btn-light btn-hover" style="font-weight: bold;">View more</a>
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
@@ -370,8 +374,8 @@
             </div>
         </div>
     </div>
-    <div class="skill">
-        <h1 style="padding: 25px; margin-top: 50px; margin-left: 50px;">Technology</h1>
+    <div class="skillTeknologi">
+        <h1 id="title" style="padding: 25px; margin-top: 50px; margin-left: 50px;">Technology</h1>
         <div class="album py-3" style="margin-bottom: 30px;">
             <div class="container">
                 <div class="row" style="justify-content:center;">
@@ -410,7 +414,7 @@
         </div>
     </div>
     <div class="footer" style="background-color: #222222; padding: 30px 0;">
-        <div style="padding: 25px; margin-left: 50px; color: white;">
+        <div id="footerContent" style="padding: 25px; margin-left: 50px; color: white;">
             <h1 style="font-weight: bold;">Get In Touch</h1>
             <p style="color: white;">For business inquiry please send email to <b><a class="email" href="mailto:hadiindrawan157@gmail.com" style="text-decoration:none; color:#04997E; transition: 0.7 all ease;">hadiindrawan157@gmail.com</a></b></p>
             <div class="medsos" style="margin-top: 100px;">
