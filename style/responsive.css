@@ -86,6 +86,12 @@
   .about .foto {
       display: none;
   }
+  .about #aboutContent p { 
+      margin-top: 35px !important;
+  }
+  .about #aboutContent .btn-hire { 
+      margin-top: 100px !important;
+  }
   .about #aboutContent { 
       padding: 35px !important;
       margin-top: 0 !important;
@@ -123,7 +129,7 @@
       padding-bottom: 20px !important;
   }
   .tab .nav {
-      margin: 0 15px;
+      margin: 0 8px;
   }
 
   .carousel-inner img {
