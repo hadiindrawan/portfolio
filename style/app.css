@@ -124,3 +124,13 @@ a {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+.skillTeknologi img {
+  width: 120px;
+}
+
+.skillTeknologi .stack-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
