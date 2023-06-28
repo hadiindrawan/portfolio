@@ -32,6 +32,10 @@ a {
   margin-left: 150px;
 }
 
+.content__main .medsos {
+  margin-top: 100px;
+}
+
 .content {
   display: flex;
 }
@@ -46,7 +50,6 @@ a {
   flex: 1;
 
   /* Make it scrollable */
-  overflow: auto;
 }
 .show {
   display: block !important;

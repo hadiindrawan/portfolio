@@ -13,14 +13,14 @@
   .content__main {
     display: flex;
     flex-direction: column;
-    margin-top: 150px;
+    margin-top: 100px;
   }
   .content__main .foto #headPhoto {
       display: none;
   }
   .content__main .foto-responsive .foto-mobile {
     display: block;
-    width: 230px;
+    width: 200px;
   }
   .content__main .foto-responsive {
     display: flex;
