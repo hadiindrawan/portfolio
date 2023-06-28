@@ -25,6 +25,12 @@ a {
 .about {
   height: 100vh;
 }
+.content__main .foto-responsive .foto-mobile {
+  display: none;
+}
+.about .foto {
+  margin-left: 150px;
+}
 
 .content {
   display: flex;

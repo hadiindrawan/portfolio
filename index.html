@@ -7,6 +7,7 @@
     <meta name="description" content="Hadi Indrawan's portfolio">
     <meta name="keywords" content="Hadi, Freelancer, Web Developer, UI/IX Designer, Engineer">
     <meta name="author" content="Hadi Indrawan">
+    <link rel="shortcut icon" href="/asset/profile-pic.png" type="image/x-icon">
     <title>Home | Hadi Indrawan</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -14,9 +15,6 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/style/app.css">
     <link rel="stylesheet" href="/style/responsive.css">
-    <style>
-        
-    </style>
 </head>
 <body>
     <div class="cover">
@@ -39,6 +37,9 @@
         
             <!-- Main -->
             <div class="d-flex content__main">
+                <div class="foto-responsive">
+                    <img src="/asset/profile-pic.png" alt="Hadi" class="foto-mobile">
+                </div>
                 <div class="text" style="align-self: center; padding-left: 45px;">
                     <h3 class="">Hi! I am</h3>
                     <div style="position: absolute;" id="namaText">
@@ -60,8 +61,8 @@
         </div> 
     </div>
     <div class="about" style="background-color: #222222; display: flex;">
-        <div class="foto" style="align-self: center; margin-left: 150px;">
-            <img src="/asset/new.png" alt="Hadi" style="height: 400px; overflow: hidden;">
+        <div class="foto" style="align-self: center;">
+            <img src="/asset/new.png" alt="Hadi" class="foto-desktop" style="height: 400px; overflow: hidden;">
         </div>
         <div id="aboutContent" style="padding: 35px 100px; margin-top: 100px;">
         <h1 style="color: #fff; margin-bottom: 25px;">About Me</h1>
@@ -309,12 +310,21 @@
         </div>
     </div>
     <div class="skillTeknologi">
-        <h1 id="title" style="padding: 25px; margin-top: 50px; margin-left: 50px;">Technology</h1>
+        <h1 id="title" style="padding: 25px; margin-top: 50px; margin-left: 50px;">Tools</h1>
         <div class="album py-3" style="margin-bottom: 30px;">
             <div class="container">
                 <div class="row" style="justify-content:center;">
                     <div class="stack-icon col-6 col-sm-4 col-md-2">
-                        <img src="/asset/figma.png" alt="Figma" width="120px">
+                        <img src="/asset/js.png" alt="JS" width="120px">
+                    </div>
+                    <div class="stack-icon col-6 col-sm-4 col-md-2">
+                        <img src="/asset/java.png" alt="Java" width="120px">
+                    </div>
+                    <div class="stack-icon col-6 col-sm-4 col-md-2">
+                        <img src="/asset/testrail.png" alt="Testrail" width="120px" style="width: 100px;">
+                    </div>
+                    <div class="stack-icon col-6 col-sm-4 col-md-2">
+                        <img src="/asset/qaseio.png" alt="QaseIO" width="120px" style="width: 90px;">
                     </div>
                     <div class="stack-icon col-6 col-sm-4 col-md-2">
                         <img src="/asset/selenium.png" alt="Selenium" width="120px" style="width: 80px;">
@@ -327,9 +337,6 @@
                     </div>
                     <div class="stack-icon col-6 col-sm-4 col-md-2">
                         <img src="/asset/cypress.png" alt="Cypress" width="120px">
-                    </div>
-                    <div class="stack-icon col-6 col-sm-4 col-md-2">
-                        <img src="/asset/js.png" alt="JS" width="120px">
                     </div>
                     <div class="stack-icon col-6 col-sm-4 col-md-2">
                         <img src="/asset/appium.png" alt="Appium" width="120px">
@@ -357,6 +364,9 @@
                     </div>
                     <div class="stack-icon col-6 col-sm-4 col-md-2">
                         <img src="/asset/mysql.png" alt="Mysql" width="120px">
+                    </div>
+                    <div class="stack-icon col-6 col-sm-4 col-md-2">
+                        <img src="/asset/figma.png" alt="Figma" width="120px">
                     </div>
                 </div>
             </div>

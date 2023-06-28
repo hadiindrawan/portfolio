@@ -10,8 +10,22 @@
   #sideBar {
       border: none !important;
   }
-  .content__main .foto {
+  .content__main {
+    display: flex;
+    flex-direction: column;
+    margin-top: 150px;
+  }
+  .content__main .foto #headPhoto {
       display: none;
+  }
+  .content__main .foto-responsive .foto-mobile {
+    display: block;
+    width: 230px;
+  }
+  .content__main .foto-responsive {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .content__main h3,
   .content__main p {
@@ -30,7 +44,7 @@
   }
 
   .content__main .text {
-      margin-top: 120px !important;
+      margin-top: 80px !important;
   }
 
   .content__main .text p {
@@ -87,7 +101,18 @@
   }
 
   /* about */
+  .about {
+    display: flex;
+    flex-direction: column;
+  }
   .about .foto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0;
+    margin-top: 80px;
+  }
+  .about .foto .foto-desktop {
       display: none;
   }
   .about #aboutContent p { 
