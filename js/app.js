@@ -58,7 +58,6 @@ function myFunction(x) {
     document.getElementById('logoWa').src = '/asset/wawhite.png'
     document.getElementById('bgNav').setAttribute('style', 'display: block;')
   } else {
-    console.log('okee');
     document.getElementById('bgNav').setAttribute('style', 'display: none;')
   }
 }
