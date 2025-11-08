@@ -1,67 +1,162 @@
-let btn = document.getElementById('toggleMenu');
-let menu = document.getElementById('menu');
-let sidebar = document.getElementById('sideBar');
-let bgNav = document.getElementById('bgNav');
+// Modern Portfolio - Main Application
+import { Navigation } from './modules/navigation.js';
+import { TypingEffect } from './modules/typing-effect.js';
+import { ScrollReveal } from './modules/scroll-reveal.js';
+import { ProjectCarousel } from './modules/carousel.js';
+import { DataRenderer } from './modules/data-renderer.js';
+import { ImageOptimizer } from './modules/image-optimizer.js';
 
-btn.addEventListener('click', function() {
-    if (menu.hasAttribute('show')) {
-        menu.classList.remove('show');
-        sidebar.classList.remove('expandSidebar');
-        bgNav.classList.remove('d-none');
-    } else {
-        menu.classList.toggle('show');
-        sidebar.classList.toggle('expandSidebar');
-        bgNav.classList.toggle('d-none');
+// Application Data
+import { portfolioData } from './data/portfolio-data.js';
+
+class PortfolioApp {
+    constructor() {
+        this.data = portfolioData;
+        this.modules = {};
+        
+        this.init();
     }
-})
 
-// nav active 
-let path = window.location.pathname;
-const homePage = document.getElementById('homeNav');
-const porfolioPage = document.getElementById('porfolioNav');
-const contactPage = document.getElementById('contactNav');
+    async init() {
+        try {
+            // Initialize modules
+            await this.initializeModules();
+            
+            // Render dynamic content
+            await this.renderContent();
+            
+            // Setup event listeners
+            this.setupEventListeners();
+            
+            // Initialize animations
+            this.initializeAnimations();
+            
+        } catch (error) {
+            console.error('Error initializing portfolio app:', error);
+        }
+    }
 
-if (path == '/index.html' || path == '/') {
-    homePage.classList.add('nav-active')
-    porfolioPage.classList.remove('nav-active')
-    contactPage.classList.remove('nav-active')
-} else if (path == '/portfolio.html') {
-    homePage.classList.remove('nav-active')
-    porfolioPage.classList.add('nav-active')
-    contactPage.classList.remove('nav-active')
-} else {
-    homePage.classList.remove('nav-active')
-    porfolioPage.classList.remove('nav-active')
-    contactPage.classList.add('nav-active')
+    async initializeModules() {
+        // Initialize navigation
+        this.modules.navigation = new Navigation();
+        
+        // Initialize typing effect
+        this.modules.typingEffect = new TypingEffect('#typed-name', {
+            strings: [this.data.personal.name],
+            typeSpeed: 100,
+            backSpeed: 60,
+            backDelay: 2000,
+            loop: true
+        });
+        
+        // Initialize scroll reveal
+        this.modules.scrollReveal = new ScrollReveal();
+        
+        // Carousel will be initialized after projects are rendered
+        
+        // Initialize data renderer
+        this.modules.dataRenderer = new DataRenderer();
+        
+        // Initialize image optimizer
+        this.modules.imageOptimizer = new ImageOptimizer();
+    }
+
+    async renderContent() {
+        // Render navigation
+        this.modules.dataRenderer.renderNavigation(this.data.navigation, '#desktop-nav', '#mobile-nav');
+        
+        // Render social links
+        this.modules.dataRenderer.renderSocialLinks(this.data.social, '#social-links', '#footer-social');
+        
+        // Render skills
+        this.modules.dataRenderer.renderSkills(this.data.skills, '#skills-grid');
+        
+        // Render projects
+        this.modules.dataRenderer.renderProjects(this.data.projects, '#project-carousel', '#carousel-indicators');
+        
+        // Initialize carousel after projects are rendered
+        setTimeout(() => {
+            this.modules.carousel = new ProjectCarousel('#project-carousel', {
+                autoplay: true,
+                autoplayDelay: 5000,
+                loop: true
+            });
+        }, 100);
+        
+        // Render tools
+        this.modules.dataRenderer.renderTools(this.data.tools, '#tools-grid');
+    }
+
+    setupEventListeners() {
+        // Window scroll event for navbar
+        window.addEventListener('scroll', this.handleScroll.bind(this));
+        
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(link => {
+            link.addEventListener('click', this.handleSmoothScroll.bind(this));
+        });
+
+        // Intersection Observer for animations
+        this.setupIntersectionObserver();
+    }
+
+    handleScroll() {
+        const navbar = document.getElementById('navbar');
+        if (window.scrollY > 100) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    }
+
+    handleSmoothScroll(e) {
+        e.preventDefault();
+        const targetId = e.currentTarget.getAttribute('href');
+        const targetSection = document.querySelector(targetId);
+        
+        if (targetSection) {
+            targetSection.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    }
+
+    setupIntersectionObserver() {
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fadeInUp');
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements that should animate on scroll
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    }
+
+    initializeAnimations() {
+        // Start typing effect
+        this.modules.typingEffect.start();
+        
+        // Initialize scroll reveal animations
+        this.modules.scrollReveal.reveal('.skill-card', { delay: 100, interval: 200 });
+        this.modules.scrollReveal.reveal('.tool-icon', { delay: 50, interval: 100 });
+        
+        // Add loading complete class
+        document.body.classList.add('loaded');
+    }
 }
 
-// typed js
-var typed = new Typed(".animate", {
-      strings: [
-        "Hadi Indrawan"
-      ],
-      typeSpeed: 160,
-      backDelay: 80,
-      backSpeed: 160,
-      loop: true,
+// Initialize the application when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    new PortfolioApp();
 });
 
-// scrollreveal
-ScrollReveal({ reset: true });
-ScrollReveal().reveal('.card-skill', {delay: 100});
-
-// responsive 
-function myFunction(x) {
-  if (x.matches) { // If media query matches
-    document.getElementById('logoIg').src = '/asset/igwhite.png'
-    document.getElementById('logoLnk').src = '/asset/linkwhite.png'
-    document.getElementById('logoWa').src = '/asset/wawhite.png'
-    document.getElementById('bgNav').setAttribute('style', 'display: block;')
-  } else {
-    document.getElementById('bgNav').setAttribute('style', 'display: none;')
-  }
-}
-
-var x = window.matchMedia("(max-width: 576px)")
-myFunction(x) // Call listener function at run time
-x.addListener(myFunction) 
+// Export for potential external use
+export { PortfolioApp }; 
