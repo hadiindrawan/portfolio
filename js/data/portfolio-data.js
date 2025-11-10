@@ -94,6 +94,38 @@ export const portfolioData = {
             icon: "/asset/engineer.png",
             color: "#A0956B",
             expertise: "Advanced"
+        },
+        {
+            id: 5,
+            title: "Software Development",
+            description: "Proficient in building backend and frontend applications using JavaScript/TypeScript, Python, and Go.",
+            icon: "/asset/web.png",
+            color: "#A0956B",
+            expertise: "Advanced"
+        },
+        {
+            id: 6,
+            title: "CI/CD Integration",
+            description: "Integrating automated tests into CI/CD pipelines using GitLab CI, Jenkins, and GitHub Actions.",
+            icon: "/asset/engineer.png",
+            color: "#A0956B",
+            expertise: "Advanced"
+        },
+        {
+            id: 7,
+            title: "Performance Testing",
+            description: "Load and stress testing using JMeter and Locust to ensure application scalability and reliability.",
+            icon: "/asset/web.png",
+            color: "#8B7D6B",
+            expertise: "Intermediate"
+        },
+        {
+            id: 8,
+            title: "Software Building",
+            description: "Experience in building and deploying applications using Docker",
+            icon: "/asset/engineer.png",
+            color: "#A0956B",
+            expertise: "Advanced"
         }
     ],
 
@@ -145,6 +177,16 @@ export const portfolioData = {
             image: "/asset/moladin.png",
             technologies: ["Cypress", "Mocha", "API Testing", "E2E Testing"],
             category: "Fintech Platform",
+            year: "2024",
+            status: "Completed"
+        },
+        {
+            id: 6,
+            title: "KewOps - AI Test Management Tool",
+            description: "Leading QA efforts for KewOps, an AI-powered test management tool designed to streamline testing workflows and enhance collaboration.",
+            image: "/asset/kewops.png",
+            technologies: ["Playwright", "AI Integration", "Test Management", "Automation Framework"],
+            category: "AI Test Management",
             year: "2024",
             status: "Ongoing"
         }

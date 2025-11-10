@@ -5,6 +5,7 @@ import { ScrollReveal } from './modules/scroll-reveal.js';
 import { ProjectCarousel } from './modules/carousel.js';
 import { DataRenderer } from './modules/data-renderer.js';
 import { ImageOptimizer } from './modules/image-optimizer.js';
+import { ProjectModal } from './modules/project-modal.js';
 
 // Application Data
 import { portfolioData } from './data/portfolio-data.js';
@@ -37,6 +38,9 @@ class PortfolioApp {
     }
 
     async initializeModules() {
+        // Wait a bit to ensure DOM is fully ready
+        await new Promise(resolve => setTimeout(resolve, 100));
+        
         // Initialize navigation
         this.modules.navigation = new Navigation();
         
@@ -59,6 +63,9 @@ class PortfolioApp {
         
         // Initialize image optimizer
         this.modules.imageOptimizer = new ImageOptimizer();
+        
+        // Initialize project modal
+        this.modules.projectModal = new ProjectModal();
     }
 
     async renderContent() {
@@ -73,6 +80,9 @@ class PortfolioApp {
         
         // Render projects
         this.modules.dataRenderer.renderProjects(this.data.projects, '#project-carousel', '#carousel-indicators');
+        
+        // Set projects data for modal
+        this.modules.projectModal.setProjects(this.data.projects);
         
         // Initialize carousel after projects are rendered
         setTimeout(() => {

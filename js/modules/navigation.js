@@ -8,19 +8,46 @@ export class Navigation {
     }
 
     init() {
-        this.bindEvents();
-        this.setupActiveNavigation();
+        // Ensure DOM is ready before binding events
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', () => {
+                this.bindEvents();
+                this.setupActiveNavigation();
+            });
+        } else {
+            this.bindEvents();
+            this.setupActiveNavigation();
+        }
     }
 
     bindEvents() {
-        // Mobile menu toggle
+        // Mobile menu toggle with debugging
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileNav = document.getElementById('mobile-nav');
         
         if (mobileMenuBtn && mobileNav) {
-            mobileMenuBtn.addEventListener('click', () => {
+            mobileMenuBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                console.log('Mobile menu button clicked');
                 this.toggleMobileMenu();
             });
+        } else {
+            console.warn('Navigation: Mobile menu elements not found, retrying in 500ms');
+            // Retry after a short delay
+            setTimeout(() => {
+                const retryBtn = document.getElementById('mobile-menu-btn');
+                const retryNav = document.getElementById('mobile-nav');
+                if (retryBtn && retryNav) {
+                    retryBtn.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        this.toggleMobileMenu();
+                    });
+                } else {
+                    console.error('Navigation: Mobile menu elements still not found after retry');
+                }
+            }, 500);
         }
 
         // Close mobile menu when clicking outside
@@ -75,7 +102,10 @@ export class Navigation {
         
         if (mobileNav) {
             mobileNav.classList.remove('hidden');
+            mobileNav.style.display = 'block'; // Fallback in case CSS classes don't work
             mobileNav.setAttribute('aria-expanded', 'true');
+        } else {
+            console.error('Mobile nav element not found!');
         }
         
         if (mobileMenuBtn) {
@@ -85,6 +115,8 @@ export class Navigation {
                 </svg>
             `;
             mobileMenuBtn.setAttribute('aria-expanded', 'true');
+        } else {
+            console.error('Mobile menu button not found!');
         }
         
         this.mobileMenuOpen = true;
@@ -99,6 +131,7 @@ export class Navigation {
         
         if (mobileNav) {
             mobileNav.classList.add('hidden');
+            mobileNav.style.display = 'none'; // Fallback
             mobileNav.setAttribute('aria-expanded', 'false');
         }
         
