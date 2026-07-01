@@ -210,15 +210,15 @@ export class Navigation {
         // Remove active class from all nav items
         const navItems = document.querySelectorAll('[data-nav-item]');
         navItems.forEach(item => {
-            item.classList.remove('text-soft-brown', 'font-semibold');
-            item.classList.add('text-charcoal');
+            item.classList.remove('text-deep-green', 'active');
+            item.classList.add('text-ink');
         });
 
         // Add active class to current nav item
         const activeItem = document.querySelector(`[data-nav-item="${sectionId}"]`);
         if (activeItem) {
-            activeItem.classList.add('text-soft-brown', 'font-semibold');
-            activeItem.classList.remove('text-charcoal');
+            activeItem.classList.add('text-deep-green', 'active');
+            activeItem.classList.remove('text-ink');
         }
     }
 

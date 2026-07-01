@@ -66,7 +66,7 @@ export class ProjectModal {
         // Add smooth entrance animation
         requestAnimationFrame(() => {
             this.modal.style.opacity = '1';
-            const modalContent = this.modal.querySelector('.relative.bg-white');
+            const modalContent = this.modal.querySelector('.rounded-card');
             if (modalContent) {
                 modalContent.style.transform = 'scale(1)';
             }
@@ -102,8 +102,8 @@ export class ProjectModal {
         // Update technologies
         const techContainer = document.getElementById('modalProjectTechnologies');
         if (techContainer && project.technologies) {
-            techContainer.innerHTML = project.technologies.map(tech => 
-                `<span class="px-3 py-1 bg-cream text-charcoal text-sm rounded-full">${tech}</span>`
+            techContainer.innerHTML = project.technologies.map(tech =>
+                `<span class="tech-pill">${tech}</span>`
             ).join('');
         }
 
@@ -125,7 +125,7 @@ export class ProjectModal {
 
         // Add exit animation
         this.modal.style.opacity = '0';
-        const modalContent = this.modal.querySelector('.relative.bg-white');
+        const modalContent = this.modal.querySelector('.rounded-card');
         if (modalContent) {
             modalContent.style.transform = 'scale(0.95)';
         }

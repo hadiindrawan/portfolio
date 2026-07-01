@@ -1,5 +1,5 @@
 // Service Worker - Modern caching strategy for portfolio website
-const CACHE_NAME = 'hadi-portfolio-v1.0.0';
+const CACHE_NAME = 'hadi-portfolio-v2.0.0';
 const CACHE_STRATEGY = {
     CACHE_FIRST: 'cache-first',
     NETWORK_FIRST: 'network-first',
@@ -14,11 +14,10 @@ const PRECACHE_ASSETS = [
     '/js/app.js',
     '/js/data/portfolio-data.js',
     '/js/modules/navigation.js',
-    '/js/modules/typing-effect.js',
     '/js/modules/scroll-reveal.js',
-    '/js/modules/carousel.js',
     '/js/modules/data-renderer.js',
     '/js/modules/image-optimizer.js',
+    '/js/modules/project-modal.js',
     '/asset/new.png',
     '/asset/profile-pic.png'
 ];
