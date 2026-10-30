@@ -1,5 +1,5 @@
 // Service Worker - Modern caching strategy for portfolio website
-const CACHE_NAME = 'hadi-portfolio-v2.0.0';
+const CACHE_NAME = 'hadi-portfolio-v2.2.0';
 const CACHE_STRATEGY = {
     CACHE_FIRST: 'cache-first',
     NETWORK_FIRST: 'network-first',

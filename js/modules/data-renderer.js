@@ -120,8 +120,7 @@ export class DataRenderer {
                 <div class="flex items-center gap-2 mb-2">
                     <h3 class="font-display text-lg tracking-tightest text-ink">${skill.title}</h3>
                 </div>
-                <p class="text-[14px] leading-relaxed text-body-muted mb-4">${skill.description}</p>
-                <span class="font-mono text-[11px] uppercase tracking-wide text-slate">${skill.level}</span>
+                <p class="text-[14px] leading-relaxed text-body-muted">${skill.description}</p>
             </div>
         `).join('');
     }
