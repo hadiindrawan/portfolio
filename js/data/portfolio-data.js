@@ -72,7 +72,7 @@ export const portfolioData = {
         description: [
             "I'm the Lead QA Engineer at **Matchmade**, where payment matching and reconciliation demand exactness from data upload to reporting. I own QA strategy and sign-off.",
             "I also build the tools QA runs on: a **Playwright + Python** E2E suite (~17k lines, 15 CI workflows), **pancake-runner** (a FastAPI + Docker job runner with live logs), and **Maxtest**, a test-management platform I built solo, with RAG-based test generation and an MCP server.",
-            "Before Matchmade: Senior SDET at **Moladin** and QA at **DOT Indonesia** on banking and government projects. I also wrote **po-gen**, an NPM library that generates API tests from Postman collections."
+            "Before Matchmade: Senior SDET at **Moladin** and QA at **DOT Indonesia** on banking and government projects. I also wrote two open-source test tools: **po-gen** (NPM), which generates API tests from Postman collections, and **max-heal** (PyPI), which auto-heals broken Playwright selectors."
         ],
         highlights: [
             "Lead QA Engineer at Matchmade",
@@ -219,6 +219,18 @@ export const portfolioData = {
             status: "In use"
         },
         {
+            id: 6,
+            title: "max-heal",
+            role: "Author",
+            description: "Playwright wrapper for Python with LLM-powered auto-heal and flaky auto-fix. When a selector breaks, it asks an LLM (via OpenRouter) for a new one and retries the assertion; healed selectors are cached for the session, and a retry decorator guards unstable async tests. It drops in around your existing Playwright page. Published on PyPI (MIT, beta).",
+            image: "/asset/max-heal.svg",
+            technologies: ["Python", "Playwright", "LLM", "pytest"],
+            category: "Open Source Library",
+            year: "2026",
+            status: "Published (beta)",
+            link: "https://pypi.org/project/max-heal/"
+        },
+        {
             id: 3,
             title: "Po-gen",
             role: "Author",
@@ -318,6 +330,13 @@ export const portfolioData = {
 
     // Open-source libraries
     libraries: [
+        {
+            name: "max-heal",
+            description: "Playwright wrapper with LLM-powered auto-heal and flaky auto-fix (author)",
+            outlet: "PyPI",
+            date: "Mar 2026",
+            url: "https://pypi.org/project/max-heal/"
+        },
         {
             name: "Po-gen",
             description: "API test generator from Postman collections (author)",
