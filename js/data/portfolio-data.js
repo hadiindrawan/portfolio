@@ -2,24 +2,24 @@
 export const portfolioData = {
     personal: {
         name: "Hadi Indrawan",
-        title: "Lead QA Engineer & Full-stack Software Engineer",
-        subtitle: "Test Systems, Automation & AI-driven Quality",
+        title: "Lead QA Engineer",
+        subtitle: "Test automation platforms & AI test tooling",
         tagline: "Quality, engineered.",
-        description: "QA Engineer and Full-stack Software Engineer with 4+ years designing, building, and optimizing testing systems across fintech startups and government agencies — from automation frameworks to AI-driven QA tooling with RAG.",
+        description: "Lead QA / SDET in payments and fintech. I turn day-long manual regression into a one-hour automated run, and build the platform the team tests on: Playwright E2E, a containerized job runner, and an AI-assisted test-management system.",
         email: "hadiindrawan157@gmail.com",
         phone: "+62 878-3000-0351",
         location: "Jakarta, Indonesia",
-        website: "https://hadiindrawan.my.id",
-        websiteLabel: "hadiindrawan.my.id",
+        website: "https://hadiindrawan.web.id",
+        websiteLabel: "hadiindrawan.web.id",
         resumeUrl: "https://drive.google.com/file/d/1Az5IgcpdmKKX2izM6GxapRmz93guJi15/view?usp=sharing"
     },
 
     // Quick-glance stats used across hero / about
     stats: [
-        { value: "4+", label: "Years in QA & Engineering" },
-        { value: "99%", label: "Test coverage on Maxtest AI" },
-        { value: "3", label: "Published articles" },
-        { value: "3", label: "Conference talks" }
+        { value: "~1h", label: "Full regression run (was ~1 day)" },
+        { value: "15", label: "CI workflows" },
+        { value: "6", label: "Services under smoke automation" },
+        { value: "5+", label: "Years in software & QA" }
     ],
 
     navigation: [
@@ -59,29 +59,26 @@ export const portfolioData = {
         }
     ],
 
-    // Companies for the trust / logo strip
+    // Employers for the "where I've worked" strip (client projects are listed under DOT)
     companies: [
         "Matchmade",
         "Moladin",
         "DOT Indonesia",
-        "Makerindo",
-        "Alami / Hijra Bank",
-        "DPR RI"
+        "Makerindo"
     ],
 
     about: {
         lead: "I build the systems that keep software honest.",
         description: [
-            "I'm a Lead QA Engineer at **Matchmade**, where payment matching and reconciliation demand exactness at every step — from data upload to processing. I own quality across those flows: test strategy, Playwright automation, quality metrics, and QA sign-off.",
-            "I also build. My work spans production-grade tooling in **React**, **Python**, and **Docker**, including **Maxtest AI** — an AI-driven test management platform using **RAG** for intelligent test generation, similarity detection, and failure analysis.",
-            "Across fintech startups and government agencies, I've architected test management solutions, led regression cycles to 100% success, mentored QA teams, and pushed for cleaner code and better standards on both sides of the codebase."
+            "I'm the Lead QA Engineer at **Matchmade**, where payment matching and reconciliation demand exactness from data upload to reporting. I own QA strategy and sign-off.",
+            "I also build the tools QA runs on: a **Playwright + Python** E2E suite (~17k lines, 15 CI workflows), **pancake-runner** (a FastAPI + Docker job runner with live logs), and **Maxtest**, a test-management platform I built solo, with RAG-based test generation and an MCP server.",
+            "Before Matchmade: Senior SDET at **Moladin** and QA at **DOT Indonesia** on banking and government projects. I also wrote **po-gen**, an NPM library that generates API tests from Postman collections."
         ],
         highlights: [
             "Lead QA Engineer at Matchmade",
-            "Full-stack: React, Python, Node, Docker",
-            "AI-driven QA with RAG",
-            "Payment systems & fintech depth",
-            "Team leadership & QA sign-off ownership"
+            "E2E automation: day-long regression → ~1 hour",
+            "Test tooling: runner, reporting, test management",
+            "Payments & fintech domain depth"
         ]
     },
 
@@ -92,48 +89,47 @@ export const portfolioData = {
             role: "Lead QA Engineer",
             period: "Sep 2024 — Present",
             location: "Jakarta, Indonesia",
-            summary: "Owning quality for payment matching and reconciliation — from data upload through processing — while building the tooling the team tests with.",
+            summary: "QA Engineer from Sep 2024, Lead since May 2025. Owning quality for payment matching and reconciliation while building the tooling the team tests with.",
             highlights: [
-                "Built the automation suite from scratch with Playwright for rapid regression feedback.",
-                "Built an internal test management platform with Python and React.",
-                "Introduced AI-driven testing for comprehensive test cases, risk analysis, and higher coverage.",
-                "Defined test strategy across functional, non-functional, automation, and regression.",
-                "Tracked quality metrics — defect density, coverage, pass/fail, automation trends — and initiated QA sign-off."
+                "Cut full regression from about a day to about an hour with a Playwright + Python E2E suite (~17k lines, ~65% authored by me) running as 15 CI workflows across 6 services.",
+                "Built pancake-runner: FastAPI + Docker SDK, isolated Playwright jobs, parallel execution, live log streaming and VNC preview.",
+                "Built the Allure reporting pipeline and a k6 performance lab.",
+                "Run QA on Maxtest, the test-management platform I built solo: cases, launches and automation runs in one place.",
+                "Own sprint QA: test plans, launches, sign-off, deployment and hotfix verification, on-call triage."
             ],
-            tags: ["Playwright", "Python", "React", "AI / RAG", "Leadership"]
+            tags: ["Playwright", "Python", "FastAPI", "Docker", "RAG / MCP"]
         },
         {
             company: "Moladin Indonesia",
             role: "Senior SDET",
-            period: "Feb 2024 — Aug 2024",
+            period: "Feb 2024 — Sep 2024",
             location: "Jakarta, Indonesia",
             summary: "Consumer financing: pre-disbursement, disbursement, LMS, and integrations to payment and insurance services.",
             highlights: [
-                "Initiated the Testing Strategy Document (TSD) to strengthen evidence and risk controls.",
-                "Authored guidelines to standardize test docs and automation scripting.",
-                "Wrote and reviewed Playwright automation and maintained the E2E suite.",
-                "Led regression from data submission to fund disbursement with a 100% success rate."
+                "Wrote the testing strategy document (TSD) and test documentation standards.",
+                "Maintained the Playwright E2E automation suite.",
+                "Led regression from data submission to fund disbursement."
             ],
             tags: ["Playwright", "E2E", "Test Strategy", "Fintech"]
         },
         {
             company: "DOT Indonesia",
-            role: "Software QA Engineer",
+            role: "QA Engineer",
             period: "Jun 2022 — Feb 2024",
             location: "Indonesia",
-            summary: "Financing apps, government web dashboards, and government-agency financial systems.",
+            summary: "Client assignments in banking and government: Alami Hijra Bank, DPR RI web revamp, and Moladin (SDET, Oct 2023 – Jan 2024, 90% automation coverage).",
             highlights: [
-                "Authored test scenarios, test data, and UAT docs for financial processes and compliance.",
-                "Analyzed requirements and surfaced gaps before they became defects.",
+                "Authored test scenarios, test data, and UAT docs for financial processes.",
                 "Built regression automation and maintained CI/CD pipelines.",
-                "Performed REST and SOAP API testing with Postman for secure, accurate data exchange."
+                "Performed REST and SOAP API testing with Postman.",
+                "Built po-gen, an API test generator published on NPM."
             ],
             tags: ["Postman", "API Testing", "CI/CD", "Automation"]
         },
         {
             company: "Makerindo Prima Solusi",
             role: "Full-stack Developer",
-            period: "Aug 2021 — Jun 2022",
+            period: "Aug 2021 — Jul 2022",
             location: "Indonesia",
             summary: "Customer management and financial features integrated with hardware devices and disbursement flows.",
             highlights: [
@@ -150,58 +146,50 @@ export const portfolioData = {
         {
             id: 1,
             title: "Test Automation",
-            description: "End-to-end automation frameworks with Playwright, Selenium, Cypress, and WebdriverIO — built for fast, reliable regression.",
-            icon: "automation",
-            level: "Expert"
+            description: "End-to-end automation with Playwright, Selenium, Cypress, and WebdriverIO. Currently 15 CI workflows across 6 services.",
+            icon: "automation"
         },
         {
             id: 2,
             title: "Manual & Exploratory",
             description: "Exploratory, functional, and usability testing with rigorous documentation across web and mobile surfaces.",
-            icon: "test",
-            level: "Expert"
+            icon: "test"
         },
         {
             id: 3,
             title: "API Testing",
             description: "REST and SOAP validation with Postman, contract checks, and automated API suites for trustworthy data exchange.",
-            icon: "api",
-            level: "Expert"
+            icon: "api"
         },
         {
             id: 4,
-            title: "AI-driven QA",
-            description: "RAG-powered test generation, similarity detection, and failure analysis that lift coverage and cut manual overhead.",
-            icon: "ai",
-            level: "Advanced"
+            title: "AI-assisted QA",
+            description: "RAG-based test generation and semantic search across cases, plans and launches, exposed to QA through an MCP server.",
+            icon: "ai"
         },
         {
             id: 5,
-            title: "Full-stack Engineering",
-            description: "Production tooling in React, Next.js, Node, Python, and Go — backed by PostgreSQL and containerized with Docker.",
-            icon: "code",
-            level: "Advanced"
+            title: "Test Platform Engineering",
+            description: "FastAPI, React, PostgreSQL and Docker: the runner, reporting and test-management tools the QA team runs on.",
+            icon: "code"
         },
         {
             id: 6,
             title: "Mobile Testing",
             description: "Native and hybrid app testing across iOS and Android with Appium and Selenium.",
-            icon: "mobile",
-            level: "Advanced"
+            icon: "mobile"
         },
         {
             id: 7,
             title: "Performance Testing",
-            description: "Load and stress testing with K6 to validate durability, scalability, and load capacity.",
-            icon: "performance",
-            level: "Advanced"
+            description: "Load testing with K6 across dev, staging and prod environments.",
+            icon: "performance"
         },
         {
             id: 8,
             title: "QA Leadership",
-            description: "Test strategy, quality metrics, task delegation, QA sign-off, and mentoring engineers toward cleaner code.",
-            icon: "leadership",
-            level: "Expert"
+            description: "Test strategy, quality metrics, sprint QA sign-off, and mentoring a QA engineer.",
+            icon: "leadership"
         }
     ],
 
@@ -209,41 +197,43 @@ export const portfolioData = {
         {
             id: 1,
             title: "Maxtest AI",
-            role: "Software Engineer",
-            description: "A comprehensive test management system for manual and automation testing, reaching 99% coverage across Matchmade's QA workflows. Python backend with RAG for intelligent test-case generation, similarity detection, and failure analysis; React frontend for management, execution tracking, and reporting; containerized with Docker and adopted across engineering teams.",
-            image: "/asset/kewops.png",
-            technologies: ["Python", "React", "RAG", "Docker", "PostgreSQL"],
+            role: "Founder & sole developer",
+            description: "Test-management platform for manual and automated testing, used by the Matchmade QA team. FastAPI, PostgreSQL and Redis/Celery backend with a React dashboard for test cases, suites, plans, launches, role-based access and an audit trail. RAG (LangChain + Qdrant) generates test cases and finds similar ones; an MCP server (OAuth, audit log, confirmation guard) lets QA query and update tests from a chat client.",
+            image: "/asset/maxtest-dashboard.webp",
+            imageFit: "contain",
+            technologies: ["Python", "FastAPI", "React", "RAG", "PostgreSQL", "Docker"],
             category: "AI Test Management",
             year: "2026",
-            status: "In Progress",
+            status: "In use",
             featured: true
         },
         {
             id: 2,
-            title: "Fashion Programming",
-            role: "Internal Full-stack Engineer",
-            description: "Immersive internal tooling for software development with OpenAI integrated. Express and Python backend wired to OpenAI and PostgreSQL, with a Next.js frontend.",
-            image: "/asset/aep.jpg",
-            technologies: ["Next.js", "Express", "Python", "OpenAI", "PostgreSQL"],
-            category: "Internal Tooling",
-            year: "2024",
-            status: "Completed"
+            title: "pancake",
+            role: "Lead engineer",
+            description: "End-to-end automation platform behind Matchmade's regression. A Playwright + Python suite (~17k lines, ~65% authored by me) runs as 15 CI workflows across 6 services on dev and staging. pancake-runner (FastAPI + Docker SDK) runs each job in its own container with live log streaming and browser preview; results publish to Allure reports. A k6 lab covers performance. Took regression from about a day to about an hour.",
+            image: "/asset/pancake.svg",
+            technologies: ["Python", "Playwright", "FastAPI", "Docker", "Allure", "k6"],
+            category: "Test Automation Platform",
+            year: "2024 – 2026",
+            status: "In use"
         },
         {
             id: 3,
-            title: "Moladin Automation",
-            role: "SDET — Automation",
-            description: "Migrated test cases to Allure TestOps, validated data across SQL and NoSQL databases against actual behavior, and built common helper functions to speed development.",
-            image: "/asset/moladin.png",
-            technologies: ["WebdriverIO", "Allure TestOps", "SQL", "NoSQL"],
-            category: "Fintech Automation",
-            year: "2024",
-            status: "Completed"
+            title: "Po-gen",
+            role: "Author",
+            description: "An API test generator: export a Postman collection and it writes the automation code. Built and published to NPM, open source on GitHub.",
+            image: "/asset/pogen.png",
+            technologies: ["JavaScript", "Node.js", "NPM", "Code Generation"],
+            category: "Open Source Library",
+            year: "2023",
+            status: "Published",
+            link: "https://www.npmjs.com/package/@dot.indonesia/po-gen"
         },
         {
             id: 4,
             title: "DPR RI Revamp",
-            role: "QA Engineer — Manual",
+            role: "QA Engineer, client project via DOT",
             description: "Manual testing for the Indonesian House of Representatives web revamp. Designed test plans, cases, and reports in Qase.io, and validated database state against actual behavior with the client.",
             image: "/asset/dpr.png",
             technologies: ["Qase.io", "Manual Testing", "UAT", "DB Validation"],
@@ -254,25 +244,13 @@ export const portfolioData = {
         {
             id: 5,
             title: "Alami / Hijra Bank",
-            role: "QA Engineer — Manual & Automation",
+            role: "QA Engineer, client project via DOT",
             description: "QA for Islamic digital banking across mobile and web. Manual testing with TestRail, UAT coordination, K6 performance testing, and mobile automation with Selenium and Appium.",
             image: "/asset/hijra.png",
             technologies: ["Selenium", "Appium", "K6", "TestRail"],
             category: "Mobile Banking",
-            year: "2023",
+            year: "2022 – 2023",
             status: "Delivered"
-        },
-        {
-            id: 6,
-            title: "Po-gen",
-            role: "QA Engineer — Automation",
-            description: "An automation API generator that scaffolds clean, suitable test code — published to NPM. Designed the generator, maintained issues, and collaborated with the team on the system.",
-            image: "/asset/pogen.png",
-            technologies: ["JavaScript", "Node.js", "NPM", "Code Generation"],
-            category: "Open Source Library",
-            year: "2023",
-            status: "Published",
-            link: "https://www.npmjs.com/package/@dot.indonesia/po-gen"
         }
     ],
 
@@ -299,35 +277,32 @@ export const portfolioData = {
         { name: "Figma", image: "/asset/figma.png", category: "Design" }
     ],
 
-    // Text-only stack list (from CV "Tech Stacks") for a mono-label chip row
+    // Text-only stack list for a mono-label chip row
     stackList: [
-        "JavaScript", "TypeScript", "Node", "Java", "Python", "Go",
-        "Selenium", "Cypress", "WebdriverIO", "Playwright", "Mocha", "Robot Framework",
-        "Appium", "K6", "Postman",
-        "TestRail", "Qase.io", "Allure TestOps", "Qameta", "Katalon", "Jira",
-        "SQL", "NoSQL", "Docker", "GitHub Actions",
-        "GCP", "Ubuntu", "VM", "Grafana"
+        "Python", "JavaScript", "TypeScript", "Go", "SQL",
+        "Playwright", "Selenium", "Cypress", "WebdriverIO", "Appium", "K6", "Postman",
+        "FastAPI", "React", "Docker", "PostgreSQL", "GitHub Actions", "Allure", "GCP", "Jira"
     ],
 
-    // Writing — Medium articles
+    // Writing — articles on the DOT engineering blog
     writing: [
         {
             title: "Continuous Testing dalam CI/CD Menggunakan Github Action: Apa, Mengapa dan Bagaimana?",
-            outlet: "Medium",
+            outlet: "DOT Engineering Blog",
             date: "Oct 2022",
             topics: ["CI/CD", "GitHub Actions"],
             url: "https://blog.dot.co.id/continuous-testing-dalam-ci-cd-menggunakan-github-action-apa-mengapa-dan-bagaimana-4a7099ebb1b5"
         },
         {
             title: "Automation Testing: What's Playwright and how to play with",
-            outlet: "Medium",
+            outlet: "DOT Engineering Blog",
             date: "Jan 2023",
             topics: ["Playwright", "Automation"],
             url: "https://blog.dot.co.id/automation-testing-whats-playwright-and-how-to-play-with-44c13085b346"
         },
         {
             title: "Streamline Your API Automation Testing with Po-gen",
-            outlet: "Medium",
+            outlet: "DOT Engineering Blog",
             date: "May 2023",
             topics: ["API", "Po-gen"],
             url: "https://blog.dot.co.id/streamline-your-api-automation-testing-with-po-gen-58e0f4a7dc0e"
@@ -345,7 +320,7 @@ export const portfolioData = {
     libraries: [
         {
             name: "Po-gen",
-            description: "Automation API generator",
+            description: "API test generator from Postman collections (author)",
             outlet: "NPM",
             date: "Mar 2023",
             url: "https://www.npmjs.com/package/@dot.indonesia/po-gen"
@@ -357,7 +332,7 @@ export const portfolioData = {
             degree: "Electrical Engineering of Education",
             institution: "Indonesia University of Education",
             period: "Sep 2018 — Sep 2022",
-            detail: "Cumulative GPA 3.62 / 4.0 · Vice Chairman, Badminton Organization"
+            detail: "Cumulative GPA 3.62 / 4.0"
         }
     ],
 

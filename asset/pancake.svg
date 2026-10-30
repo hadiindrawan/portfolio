@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="pancake architecture: test suites, FastAPI runner, one Docker container per job, Allure report">
+  <rect width="800" height="600" fill="#17171c"/>
+  <g font-family="ui-monospace, 'Space Mono', monospace" font-size="20" fill="#ffffff" text-anchor="middle">
+    <rect x="60" y="70" width="680" height="84" rx="10" fill="#003c33" stroke="#ffffff" stroke-opacity="0.15"/>
+    <text x="400" y="120">Playwright + Python E2E suites</text>
+
+    <path d="M400 154v46" stroke="#ff7759" stroke-width="2"/>
+    <path d="M392 192l8 10 8-10" fill="none" stroke="#ff7759" stroke-width="2"/>
+
+    <rect x="60" y="206" width="680" height="84" rx="10" fill="#17171c" stroke="#ffffff" stroke-opacity="0.35"/>
+    <text x="400" y="256">pancake-runner · FastAPI + SSE logs</text>
+
+    <path d="M400 290v46" stroke="#ff7759" stroke-width="2"/>
+    <path d="M392 328l8 10 8-10" fill="none" stroke="#ff7759" stroke-width="2"/>
+
+    <rect x="60" y="342" width="680" height="84" rx="10" fill="#17171c" stroke="#ffffff" stroke-opacity="0.35"/>
+    <text x="400" y="392">one Docker container per job</text>
+
+    <path d="M400 426v46" stroke="#ff7759" stroke-width="2"/>
+    <path d="M392 464l8 10 8-10" fill="none" stroke="#ff7759" stroke-width="2"/>
+
+    <rect x="60" y="478" width="680" height="84" rx="10" fill="#003c33" stroke="#ffffff" stroke-opacity="0.15"/>
+    <text x="400" y="528">Allure report · CI on dev &amp; staging</text>
+  </g>
+</svg>

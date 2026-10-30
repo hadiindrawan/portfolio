@@ -79,6 +79,10 @@ export class ProjectModal {
         if (image) {
             image.src = project.image;
             image.alt = project.title;
+            // Wide UI screenshots must not be cropped to a strip; mockups keep object-cover.
+            const contain = project.imageFit === 'contain';
+            image.classList.toggle('object-contain', contain);
+            image.classList.toggle('object-cover', !contain);
         }
 
         // Update category
