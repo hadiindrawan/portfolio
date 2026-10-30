@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="max-heal flow: a selector breaks, an LLM proposes a new one, the assertion is retried, the healed selector is cached">
+  <rect width="800" height="600" fill="#17171c"/>
+  <g font-family="ui-monospace, 'Space Mono', monospace" font-size="20" fill="#ffffff" text-anchor="middle">
+    <text x="400" y="62" font-size="26" font-weight="700">max-heal</text>
+
+    <rect x="60" y="100" width="680" height="84" rx="10" fill="#17171c" stroke="#ff7759" stroke-opacity="0.8"/>
+    <text x="400" y="150">selector breaks · assertion fails</text>
+
+    <path d="M400 184v46" stroke="#ff7759" stroke-width="2"/>
+    <path d="M392 222l8 10 8-10" fill="none" stroke="#ff7759" stroke-width="2"/>
+
+    <rect x="60" y="236" width="680" height="84" rx="10" fill="#003c33" stroke="#ffffff" stroke-opacity="0.15"/>
+    <text x="400" y="286">LLM proposes a new selector</text>
+
+    <path d="M400 320v46" stroke="#ff7759" stroke-width="2"/>
+    <path d="M392 358l8 10 8-10" fill="none" stroke="#ff7759" stroke-width="2"/>
+
+    <rect x="60" y="372" width="680" height="84" rx="10" fill="#17171c" stroke="#ffffff" stroke-opacity="0.35"/>
+    <text x="400" y="422">assertion retried · test continues</text>
+
+    <path d="M400 456v46" stroke="#ff7759" stroke-width="2"/>
+    <path d="M392 494l8 10 8-10" fill="none" stroke="#ff7759" stroke-width="2"/>
+
+    <rect x="60" y="508" width="680" height="64" rx="10" fill="#003c33" stroke="#ffffff" stroke-opacity="0.15"/>
+    <text x="400" y="548" font-size="18">healed selector cached for the session</text>
+  </g>
+</svg>
